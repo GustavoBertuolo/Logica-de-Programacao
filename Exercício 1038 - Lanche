@@ -1,0 +1,46 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int CODIGO, QUANTIDADE;
+    double PRECO;
+    
+    scanf("%d%d", &CODIGO, &QUANTIDADE);
+    
+    if(CODIGO == 1)
+    {
+        PRECO = QUANTIDADE * 4;
+    }
+    else
+    {
+        if(CODIGO == 2)
+        {
+            PRECO = QUANTIDADE * 4.5;
+        }
+        else
+        {
+            if(CODIGO == 3)
+            {
+                PRECO = QUANTIDADE * 5;
+            }
+            else
+            {
+                if(CODIGO == 4)
+                {
+                    PRECO = QUANTIDADE * 2;
+                }
+                else
+                {
+                    if(CODIGO == 5)
+                    {
+                        PRECO = QUANTIDADE * 1.5;
+                    }
+                }
+            }
+        }
+    }
+    
+    printf("Total: R$ %.2lf\n", PRECO);
+ 
+    return 0;
+}
