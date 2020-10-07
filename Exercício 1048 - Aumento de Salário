@@ -1,0 +1,53 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    double Si, Sf, delta;
+    int P;
+    scanf("%lf", &Si);
+    if(Si<=400.00&&Si>=0)
+    {
+        Sf=Si*1.15;
+        delta=Sf-Si;
+        P=15;
+    }
+    else
+    {
+        if(Si<=800.00&&Si>=400.01)
+        {
+            Sf=Si*1.12;
+            delta=Sf-Si;
+            P=12;
+        }
+        else
+        {
+            if(Si<=1200.00&&Si>=800.01)
+            {
+                Sf=Si*1.10;
+                delta=Sf-Si;
+                P=10;
+            }
+            else
+            {
+                if(Si<=2000.00&&Si>=1200.01)
+                {
+                    Sf=Si*1.07;
+                    delta=Sf-Si;
+                    P=7;
+                }
+                else
+                {
+                    if(Si>2000.00)
+                    {
+                        Sf=Si*1.04;
+                        delta=Sf-Si;
+                        P=4;
+                    }
+                }
+            }
+        }
+    }
+    printf("Novo salario: %.2lf\nReajuste ganho: %.2lf\nEm percentual: %d %\n", Sf, delta, P);
+ 
+    return 0;
+}
