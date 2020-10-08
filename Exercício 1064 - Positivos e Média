@@ -1,0 +1,41 @@
+#include <stdio.h>
+ 
+int main() {
+    double a, b, c, d, e, f, A=0, B=0, C=0, D=0, E=0, F=0, media;
+    int k=0;
+    scanf("%lf%lf%lf%lf%lf%lf", &a, &b, &c, &d, &e, &f);
+    if(a>0)
+    {
+        k+=1;
+        A=a;
+    }
+    if(b>0)
+    {
+        k+=1;
+        B=b;
+    }
+    if(c>0)
+    {
+        k+=1;
+        C=c;
+    }
+    if(d>0)
+    {
+        k+=1;
+        D=d;
+    }    
+    if(e>0)
+    {
+        k+=1;
+        E=e;
+    }    
+    if(f>0)
+    {
+        k+=1;
+        F=f;
+    }
+    media=(A+B+C+D+E+F)/k;
+    printf("%d valores positivos\n%.1lf\n", k, media);
+ 
+    return 0;
+}
