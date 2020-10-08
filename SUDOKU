@@ -1,0 +1,65 @@
+#include <stdio.h>
+int main()
+{
+  int l, c, k=0, i=0, rtrn=0, n, x=1, somaQ=0, S[9][9];
+  scanf("%d",&n);
+  while(x<=n)
+  {
+    for(l=0; l<9; l++)
+    {
+      for(c=0; c<9; c++)
+      {
+        scanf("%d",&S[l][c]);
+      }
+    }
+    for(l=0; l<9; l++)
+    {
+      if(S[l][0]*S[l][1]*S[l][2]*S[l][3]*S[l][4]*S[l][5]*S[l][6]*S[l][7]*S[l][8]!=362880)
+      {
+        rtrn+=1;
+      }
+    }
+    for(c=0; c<9; c++)
+    {
+      if(S[0][c]*S[1][c]*S[2][c]*S[3][c]*S[4][c]*S[5][c]*S[6][c]*S[7][c]*S[8][c]!=362880)
+      {
+        rtrn+=1;
+      }
+    }
+    while(i<=6)
+    {
+      k=0;
+      while(k<=6)
+      {
+        somaQ=0;
+        for(l=i; l<3+i; l++)
+        {
+          for(c=k; c<3+k; c++)
+          {
+            somaQ+=S[l][c];
+          }
+        }
+        if(somaQ!=45)
+        {
+          rtrn+=1;
+          l=6;
+        }
+      k=k+3;
+      }
+    i=i+3;
+    }
+    if(rtrn==0)
+    {
+      printf("Instancia %d\nSIM\n\n",x);
+    }
+    else
+    {
+      printf("Instancia %d\nNAO\n\n",x);
+    }
+  x++;
+  rtrn=0;
+  i=0;
+  k=0;
+  }
+return 0;
+}
