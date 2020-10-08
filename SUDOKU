@@ -52,6 +52,7 @@ int main()
       }
     i=i+3;
     }
+    //Cada Verificacao mal sucedida soma 1 a variavel rtrn,  dessa forma se a variavel for diferente de zero significa que a matriz analizada esta incorreta
     if(rtrn==0)
     {
       printf("Instancia %d\nSIM\n\n",x);
@@ -60,6 +61,7 @@ int main()
     {
       printf("Instancia %d\nNAO\n\n",x);
     }
+    //Reseta as variaveis para nao influenciar as proximas leituras de matrizes
   x++;
   rtrn=0;
   i=0;
