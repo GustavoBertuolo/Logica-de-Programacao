@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int x, y, k, soma=0;
+    scanf("%d%d", &x, &y);
+    if(y>x)
+    {
+        k=x;
+        x=y;
+        y=k;
+    }
+    while(y<x)
+    {
+        y++;
+        if(y%2!=0&&y!=x)
+        {
+            soma+=y;
+        }
+    }
+    printf("%d\n", soma);
+
+    return 0;
+}
