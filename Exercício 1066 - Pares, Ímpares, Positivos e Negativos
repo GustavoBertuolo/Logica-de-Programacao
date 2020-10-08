@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int a, x2=0, x1=0, xp=0, b=0, xn=0;
+    for(a=0; a<5; a++)
+    {
+        scanf("%d", &b);
+        if(b%2==0)
+        {
+            x2++;
+        }
+        else
+        {
+            x1++;
+        }
+
+        if(b<0)
+        {
+            xn++;
+        }
+        else if(b>0)
+        {
+            xp++;
+        }
+    }
+    printf("%d valor(es) par(es)\n%d valor(es) impar(es)\n%d valor(es) positivo(s)\n%d valor(es) negativo(s)\n", x2, x1, xp, xn);
+    return 0;
+}
