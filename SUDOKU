@@ -5,6 +5,7 @@ int main()
   scanf("%d",&n);
   while(x<=n)
   {
+  //Lê a(s) matriz(es) inserida(s)
     for(l=0; l<9; l++)
     {
       for(c=0; c<9; c++)
@@ -12,6 +13,7 @@ int main()
         scanf("%d",&S[l][c]);
       }
     }
+    //Verifica a coerencia das linhas, nao e 100% correto, mas e complementado pela verificacao em blocos 3x3
     for(l=0; l<9; l++)
     {
       if(S[l][0]*S[l][1]*S[l][2]*S[l][3]*S[l][4]*S[l][5]*S[l][6]*S[l][7]*S[l][8]!=362880)
@@ -19,6 +21,7 @@ int main()
         rtrn+=1;
       }
     }
+    //Verifica a coerencia das colunas
     for(c=0; c<9; c++)
     {
       if(S[0][c]*S[1][c]*S[2][c]*S[3][c]*S[4][c]*S[5][c]*S[6][c]*S[7][c]*S[8][c]!=362880)
@@ -26,6 +29,7 @@ int main()
         rtrn+=1;
       }
     }
+    //Verifica a matriz em blocos 3x3
     while(i<=6)
     {
       k=0;
